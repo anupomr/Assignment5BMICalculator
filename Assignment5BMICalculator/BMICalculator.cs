@@ -11,8 +11,8 @@ using System.Windows.Forms;
 Name: Anupom Roy
 ID  :300853516
 Date: August 3, 2017
-Description: Created Demo Application
-Version: 0.1
+Description: Modify the properties of the BMICalculator Form
+Version: 0.2
  */
 namespace Assignment5BMICalculator
 {
