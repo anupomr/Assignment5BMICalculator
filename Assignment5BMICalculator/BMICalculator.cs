@@ -11,8 +11,8 @@ using System.Windows.Forms;
 Name: Anupom Roy
 ID  :300853516
 Date: August 3, 2017
-Description: Modify the properties of the BMICalculator Form
-Version: 0.2
+Description: UI Controls  added
+Version: 0.3
  */
 namespace Assignment5BMICalculator
 {
@@ -21,6 +21,11 @@ namespace Assignment5BMICalculator
         public BMICalculator()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
