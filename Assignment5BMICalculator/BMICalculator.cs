@@ -11,7 +11,7 @@ using System.Windows.Forms;
 Name: Anupom Roy
 ID  :300853516
 Date: August 3, 2017
-Description: UI Controls  added
+Description: UI Controls  Modify
 Version: 0.3
  */
 namespace Assignment5BMICalculator
@@ -23,7 +23,7 @@ namespace Assignment5BMICalculator
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void CalculateButton_Click(object sender, EventArgs e)
         {
 
         }
