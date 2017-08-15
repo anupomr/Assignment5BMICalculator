@@ -7,8 +7,8 @@ using System.Windows.Forms;
 Name: Anupom Roy
 ID  :300853516
 Date: August 3, 2017
-Description: A BMICalculator app with Windows Forms
-Version: 0.1
+Description: BMICalculator  Demo Project
+Version: 0.1 created an instance of the BMICalculator object
  */
 namespace Assignment5BMICalculator
 {
