@@ -12,7 +12,7 @@ Name: Anupom Roy
 ID  :300853516
 Date: August 3, 2017
 Description: UI Controls  Modify BMICalculator  Demo Project
-Version: 0.4 Imperial and Metric RadioButton implemented
+Version: 0.5 Add functionality of controls
  */
 namespace Assignment5BMICalculator
 {
@@ -38,12 +38,55 @@ namespace Assignment5BMICalculator
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is a private mathod Calculate BMI
+        /// </summary>
+        /// <param name="height"></param>
+        /// <param name="weight"></param>
+        private void Calculate_BMI(double height, double weight)
+        {
+            if (MetricRadioButton.Checked)
+            {
+                this.RESULT = weight / Math.Pow(height, 2);
+                resultTextBox.Text = string.Format("{0:f}", RESULT);
+            }
+            else
+            {
+                this.RESULT = (weight * 703) / Math.Pow(height, 2);
+                resultTextBox.Text = string.Format("{0:f}", this.RESULT);
+            }
+        }
         private void CalculateButton_Click(object sender, EventArgs e)
         {
-            double height, wedth, result;
-             height = Convert.ToDouble(HeightTextBox.Text);
-             wedth = Convert.ToDouble(WeightTextBox.Text);
-            result = (wedth * 703) / (height * height);
+            double height = double.Parse(HeightTextBox.Text);
+            double weight = double.Parse(WeightTextBox.Text);
+            Calculate_BMI(height, weight);
+
+            if (this.RESULT > 30)
+            {
+                BMIProgressBar.Value = BMIProgressBar.Maximum;
+                ResultListBox.Text = "Obese: 30 or greater";             
+                BMIProgressBar.ForeColor = Color.Red;
+            }
+            else if (this.RESULT > 24.9 && this.RESULT<30)
+            {
+                BMIProgressBar.Value = (int)this.RESULT;
+                ResultListBox.Text = "Overweight: Between 25 and 29.5";
+                BMIProgressBar.ForeColor = Color.Orange;
+            }
+            else if (this.RESULT > 18.5 && this.RESULT<24.9)
+            {
+                BMIProgressBar.Value = (int)this.RESULT;
+                ResultListBox.Text = "Normal: Between 18.5 and 24.9";
+                BMIProgressBar.ForeColor = Color.Green;
+            }
+            else
+            {
+                BMIProgressBar.Value = (int)this.RESULT;
+                ResultListBox.Text = "Underweight: Less then 18.5";
+                BMIProgressBar.ForeColor = Color.LightGreen;
+            }
+            BMIProgressBar.Show();
 
         }
 
@@ -51,6 +94,7 @@ namespace Assignment5BMICalculator
         {
             HeightTextBox.Text = "";
             WeightTextBox.Text = "";
+            resultTextBox.Text = "";
         }
 
         private void MetricRadioButton_CheckedChanged(object sender, EventArgs e)
