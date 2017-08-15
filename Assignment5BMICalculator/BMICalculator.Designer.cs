@@ -131,7 +131,7 @@
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(92, 38);
             this.ClearButton.TabIndex = 7;
-            this.ClearButton.Text = "Clear";
+            this.ClearButton.Text = "Reset";
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 

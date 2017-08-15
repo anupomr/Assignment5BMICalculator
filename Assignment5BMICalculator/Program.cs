@@ -14,6 +14,7 @@ namespace Assignment5BMICalculator
 {
     static class Program
     {
+        public static BMICalculator bmiCalculator;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
