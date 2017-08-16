@@ -23,7 +23,8 @@ namespace Assignment5BMICalculator
         {
            // Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+            bmiCalculator = new BMICalculator();
+            Application.Run(new SplashScreeForm());
         }
     }
 }

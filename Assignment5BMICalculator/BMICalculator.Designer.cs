@@ -144,6 +144,7 @@
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(88, 29);
             this.HeightTextBox.TabIndex = 8;
+            this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
             // 
             // WeightTextBox
             // 
@@ -154,6 +155,7 @@
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(88, 29);
             this.WeightTextBox.TabIndex = 9;
+            this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightTextBox_KeyPress);
             // 
             // BmiCalculatorLabel
             // 
@@ -208,9 +210,11 @@
             // 
             // resultTextBox
             // 
+            this.resultTextBox.BackColor = System.Drawing.Color.White;
             this.BMITableLayoutPanel.SetColumnSpan(this.resultTextBox, 2);
             this.resultTextBox.Location = new System.Drawing.Point(199, 179);
             this.resultTextBox.Name = "resultTextBox";
+            this.resultTextBox.ReadOnly = true;
             this.resultTextBox.Size = new System.Drawing.Size(95, 38);
             this.resultTextBox.TabIndex = 12;
             // 
@@ -261,6 +265,7 @@
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMICalculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculator_FormClosing);
             this.BMITableLayoutPanel.ResumeLayout(false);
             this.BMITableLayoutPanel.PerformLayout();
             this.ResumeLayout(false);
